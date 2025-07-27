@@ -3,23 +3,19 @@ import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
 
 export default function ProductCart({ product }) {
-  const handleAddToCart = (product) => {
-    console.log("تمت إضافة المنتج إلى السلة:", product);
-    // هنا ممكن تضيفيه للسلة باستخدام Context أو Redux أو localStorage
-  };
 
   return (
     <div
       className="group relative bg-white rounded-2xl p-4 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 overflow-hidden z-0"
     >
-      {/* شارة BEST SELLER */}
+      
       {product.rating?.count > 300 && (
         <span className="absolute top-3 left-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md z-20">
           BEST SELLER
         </span>
       )}
 
-      {/* صورة المنتج */}
+      
       <div className="flex justify-center items-center h-48 mb-4 z-10 relative">
         <img
           src={product.image}
@@ -57,12 +53,12 @@ export default function ProductCart({ product }) {
         </div>
       </div>
 
-      {/* عنوان المنتج */}
+    
       <h3 className="text-center text-sm font-medium text-gray-800 min-h-[3rem] line-clamp-2 z-0">
         {product.title}
       </h3>
 
-      {/* السعر والتقييم */}
+    
       <div className="flex justify-between items-center mt-4 z-0">
         <span className="text-primary font-bold text-lg dark:text-pink-700">
           ${product.price}
