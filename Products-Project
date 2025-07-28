@@ -1,0 +1,23 @@
+# 🛒 Products Project
+
+A simple product gallery built using **React** and **Tailwind CSS**.  
+It displays products, allows viewing details, supports dark mode and is responsive.
+
+## 🌟 Features
+
+- Product cards with hover effects
+- Detailed product page
+- Dark/Light mode toggle
+- Responsive design
+
+## 🛠️ Tech Stack
+
+- React
+- Tailwind CSS
+- React Router
+- Lucide Icons
+
+## 🙋‍♀️ Author
+
+- **Rahma Walied Mohamed**
+- [GitHub Profile](https://github.com/RahmaWalied)
