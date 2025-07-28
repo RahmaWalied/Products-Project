@@ -17,6 +17,9 @@ It displays products, allows viewing details, supports dark mode and is responsi
 - React Router
 - Lucide Icons
 
+## 🚀 Live Demo
+
+[Click here to view the project](https://products-proj.netlify.app)
 
 ## 🙋‍♀️ Author
 
