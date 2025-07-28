@@ -17,30 +17,30 @@ function App() {
     setDarkMode(!darkMode);
   }
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout darkMode={darkMode} toggleMode={toggleMode} />,
-      children: [
-        {
-          path: "/",
-          element: <Navigate to="/products" />,
-        },
-        {
-          path: "products",
-          element: <Products />,
-        },
-        {
-          path: "/product/:id",
-          element: <ProductDetails />,
-        },
-        {
-          path: "*",
-          element: <NotFound />,
-        },
-      ],
-    },
-  ]);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout darkMode={darkMode} toggleMode={toggleMode} />,
+    children: [
+      {
+        index: true,
+        element: <Navigate to="/products" />,
+      },
+      {
+        path: "products",
+        element: <Products />,
+      },
+      {
+        path: "product/:id",
+        element: <ProductDetails />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <NotFound/>,
+},
+]);
 
   return (
     <div className={darkMode ? "dark" : ""}>

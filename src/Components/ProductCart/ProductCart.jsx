@@ -3,19 +3,14 @@ import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
 
 export default function ProductCart({ product }) {
-
   return (
-    <div
-      className="group relative bg-white rounded-2xl p-4 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 overflow-hidden z-0"
-    >
-      
+    <div className="group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all  duration-300 cursor-pointer hover:-translate-y-1 z-0">
       {product.rating?.count > 300 && (
         <span className="absolute top-3 left-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md z-20">
           BEST SELLER
         </span>
       )}
 
-      
       <div className="flex justify-center items-center h-48 mb-4 z-10 relative">
         <img
           src={product.image}
@@ -28,7 +23,7 @@ export default function ProductCart({ product }) {
           <Link
             to={`/product/${product.id}`}
             onClick={(e) => e.stopPropagation()}
-            className="icon  bg-pink-800 dark:bg-black opacity-0 translate-y-20 group-hover:translate-y-0 group-hover:opacity-100 hover:bg-darkPrimary duration-1000 cursor-pointer bg-primary flex justify-center items-center size-12 bg-opacity-70 rounded-full text-white"
+            className="icon bg-pink-800 dark:bg-black opacity-100 translate-y-0 md:opacity-0 md:translate-y-20 md:group-hover:translate-y-0 md:group-hover:opacity-100 hover:bg-darkPrimary duration-1000 cursor-pointer bg-primary flex justify-center items-center size-12 bg-opacity-70 rounded-full text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,12 +48,10 @@ export default function ProductCart({ product }) {
         </div>
       </div>
 
-    
       <h3 className="text-center text-sm font-medium text-gray-800 min-h-[3rem] line-clamp-2 z-0">
-        {product.title}
+        {product.title.split(" ").slice(0, 3).join(" ")}
       </h3>
 
-    
       <div className="flex justify-between items-center mt-4 z-0">
         <span className="text-primary font-bold text-lg dark:text-pink-700">
           ${product.price}
